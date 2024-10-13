@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const Login = ({ onLogin, setIsLoggedIn }) => {
+const Login = ({ onLogin}) => {
 	const [username, setUserName] = useState("");
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState("");

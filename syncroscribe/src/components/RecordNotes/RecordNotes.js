@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import Recorder from './Recorder/Recorder';
 
 const RecordNotes = ({ setCurrentPage, setTranscriptions, transcriptions }) => {

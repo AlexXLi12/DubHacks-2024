@@ -6,7 +6,7 @@ const Recorder = ({setTranscriptions, transcriptions}) => {
     const audioChunksRef = useRef([]);
 
     const config = require("../../../config.json");
-    const api_key = config.api_key;
+    const api_key = config.whisper_api_key;
     const auth_string = "Bearer " + api_key;
     const getTranscription = async (audioBlob) => {
 		const body = new FormData();
@@ -18,7 +18,7 @@ const Recorder = ({setTranscriptions, transcriptions}) => {
 		fetch("https://api.lemonfox.ai/v1/audio/transcriptions", {
 			method: "POST",
 			headers: {
-				'Authorization': auth_string,
+				Authorization: auth_string,
 			},
 			body: body,
 		})
@@ -46,7 +46,7 @@ const Recorder = ({setTranscriptions, transcriptions}) => {
 				const audioBlob = new Blob(audioChunksRef.current, {
 					type: "audio/wav",
 				});
-                const transcription = await getTranscription(audioBlob);
+                await getTranscription(audioBlob);
 				audioChunksRef.current = [];
 			};
 			mediaRecorderRef.current.start();
