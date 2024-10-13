@@ -13,19 +13,21 @@ const HandOff = ({
 			{
 				role: "system",
 				content:
-					"Briefly summarize the following narration of a nurse about a patient for the next shift, only highlighting the most important points. Do not include an introduction. Use \\n for line breaks.",
-            },
-            {
-                role: "user",
-                content: input,
-            }
+					"Briefly summarize the following narration of a nurse about a patient for the next shift. " +
+                    "Only focus on the important information, nuanced information. " +
+                    "Do not include an introduction. Use backslash n for line breaks."
+			},
+			{
+				role: "user",
+				content: input,
+			},
 		];
 		const response = await fetch("/proxy", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({ messages: messages}),
+			body: JSON.stringify({ messages: messages, temperature: 0.1 }),
 		});
 		const result = await response.json();
 		setSummary(result.result.response);
@@ -35,7 +37,7 @@ const HandOff = ({
 		const confirmedTranscriptionsString = confirmedTranscriptions.join(". ");
 		await run(confirmedTranscriptionsString);
 		console.log("setting current page to viewNotes");
-		setCurrentPage("viewNotes");
+		setCurrentPage("dashBoard");
 	};
 
 	return (

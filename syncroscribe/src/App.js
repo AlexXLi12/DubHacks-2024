@@ -8,8 +8,8 @@ import ConfirmNotes from "./components/ConfirmNotes/ConfirmNotes";
 import "./components/ConfirmNotes/ConfirmNotes.css";
 import HandOff from "./components/HandOff/HandOff";
 import "./components/HandOff/HandOff.css";
-import ViewNotes from "./components/ViewNotes/ViewNotes";
-import "./components/ViewNotes/ViewNotes.css";
+import Dashboard from "./components/Dashboard/Dashboard";
+import "./components/Dashboard/Dashboard.css";
 function App() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const [username, setUserName] = useState("");
@@ -51,9 +51,9 @@ function App() {
           setSummary={setSummary}
 				/>
 			);
-    } else if (currentPage === "viewNotes") {
+    } else if (currentPage === "dashBoard") {
 			return (
-        <ViewNotes summary={summary} data={data} />
+        <Dashboard summary={summary} data={data} />
 			);
 		} else {
 			setIsLoggedIn(false);
