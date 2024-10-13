@@ -1,0 +1,40 @@
+/* Add a very thin line around the component */
+.component {
+    padding: 20px;
+    border: 1px solid #ccc; /* Adjusted border width to 1px */
+    max-width: "300px";
+    border-radius: 10px;
+    margin: "0 auto"
+}
+
+/* Add padding to the username and password fields */
+input[type="username"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Adjust width to account for padding and border */
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+label {
+    font-size: 16px;
+    color: black;
+    margin: 10px;
+}
+
+/* black button with white text */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #333;
+}
