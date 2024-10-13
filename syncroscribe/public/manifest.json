@@ -1,0 +1,8 @@
+{
+  "short_name": "SyncroScribe",
+  "name": "SyncroScribe: AI-Powered Nurse Hand-off Documentation",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

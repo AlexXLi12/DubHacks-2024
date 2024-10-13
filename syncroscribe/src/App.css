@@ -1,6 +1,14 @@
+/* Add a very thin line around the component */
+.component {
+	padding: 20px;
+	border: 1px solid #ccc; /* Adjusted border width to 1px */
+	max-width: "300px";
+	border-radius: 10px;
+	margin: "0 auto";
+}
 .App {
 	display: flex;
-  flex-direction: column;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh; /* Full viewport height */
