@@ -3,12 +3,13 @@ import Recorder from './Recorder/Recorder';
 
 const RecordNotes = ({setCurrentPage}) => {
     return (
-        <div className="component">
+        <div className="component" style={{ border: 'none' }}>
             <h1>Record Notes</h1>
-            <div className="recorded-notes">
-
-            </div>
             <Recorder />
+            <div className="button-container">
+                <button onClick={() => setCurrentPage("login")}>Back</button>
+                <button onClick={() => setCurrentPage("confirmNotes")}>Next</button>
+            </div>
         </div>
     );
 };

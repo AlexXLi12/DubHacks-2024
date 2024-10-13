@@ -36,19 +36,16 @@ function App() {
           <h1>View Notes</h1>
         </div>
       )
+    } else {
+      setIsLoggedIn(false);
     }
-    return (
-      <div>
-        <h1>Hello admin</h1>
-      </div>
-    )
   } else {
     return (
 			<div className="App">
 				<header className="App-header">
 					<h1>SyncroScribe</h1>
 				</header>
-				<Login onLogin={handleLogin} />
+				<Login onLogin={handleLogin} setIsLoggedIn={setIsLoggedIn} />
 			</div>
 		);
   }

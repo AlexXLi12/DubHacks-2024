@@ -58,6 +58,8 @@ const Recorder = () => {
 	return (
 		<div className="component">
             <div className="recorded-notes">
+                <h2>Recorded Notes</h2>
+                {transcriptions.length === 0 && <div>No notes recorded yet</div>}
                 {transcriptions.map((transcription, index) => (
                     <div key={index}>
                         {transcription}

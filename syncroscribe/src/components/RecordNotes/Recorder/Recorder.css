@@ -5,3 +5,23 @@
   align-items: center;
   margin: 20px;
 }
+
+.record-new-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.record-new-note button {
+  margin-top: 20px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  width: 50%;
+}
+.record-new-note button:hover {
+  background-color: #333;
+}
