@@ -1,10 +1,9 @@
 import React, { useState, useRef } from "react";
 import "./Recorder.css";
-const Recorder = () => {
+const Recorder = ({setTranscriptions, transcriptions}) => {
 	const [isRecording, setIsRecording] = useState(false);
 	const mediaRecorderRef = useRef(null);
     const audioChunksRef = useRef([]);
-    const [transcriptions, setTranscriptions] = useState([]);
 
     const config = require("../../../config.json");
     const api_key = config.api_key;

@@ -4,10 +4,14 @@ import Login from "./components/Login/Login";
 import "./components/Login/Login.css";
 import RecordNotes from "./components/RecordNotes/RecordNotes";
 import "./components/RecordNotes/RecordNotes.css";
+import ConfirmNotes from "./components/ConfirmNotes/ConfirmNotes";
+import "./components/ConfirmNotes/ConfirmNotes.css";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUserName] = useState("");
   const [currentPage, setCurrentPage] = useState("login");
+  const [transcriptions, setTranscriptions] = useState([]);
+
   const handleLogin = (username) => {
     setIsLoggedIn(true);
     setUserName(username);
@@ -16,13 +20,15 @@ function App() {
   if (isLoggedIn) {
     if (currentPage === "recordNotes") {
       return (
-        <RecordNotes setCurrentPage={setCurrentPage}/>
+        <RecordNotes setCurrentPage={setCurrentPage}
+          setTranscriptions={setTranscriptions}
+          transcriptions={transcriptions} />
       )
     } else if (currentPage === "confirmNotes") {
       return (
-        <div>
-          <h1>Confirm Notes</h1>
-        </div>
+        <ConfirmNotes setCurrentPage={setCurrentPage}
+          setTranscriptions={setTranscriptions}
+          transcriptions={transcriptions} />
       )
     } else if (currentPage === "handOff") {
       return (
