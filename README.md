@@ -1,4 +1,4 @@
-# DubHacks 2024 Project
+# syncroScribe
 ## Team Members
 - Alex Li
 - Hannah Ryu
