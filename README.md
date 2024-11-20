@@ -1,4 +1,4 @@
-# syncroScribe
+# SyncroScribe
 ## Team Members
 - Alex Li
 - Hannah Ryu
